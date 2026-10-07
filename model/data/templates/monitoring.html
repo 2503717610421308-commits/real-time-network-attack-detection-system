@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Live Network Monitoring</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>
+        Live Network Monitoring
+    </h1>
+
+    <a href="/logout">
+        Logout
+    </a>
+
+</header>
+
+
+<nav>
+
+    <a href="/dashboard">
+        Dashboard
+    </a>
+
+    <a href="/monitoring">
+        Monitoring
+    </a>
+
+    <a href="/logs">
+        Logs
+    </a>
+
+</nav>
+
+
+<main>
+
+<section class="panel">
+
+    <h2>
+        Network Traffic Analyzer
+    </h2>
+
+    <form id="trafficForm">
+
+        <input
+            id="source_ip"
+            placeholder="Source IP"
+            value="192.168.1.10"
+        >
+
+        <input
+            id="destination_ip"
+            placeholder="Destination IP"
+            value="192.168.1.1"
+        >
+
+        <select id="protocol">
+
+            <option>TCP</option>
+            <option>UDP</option>
+            <option>HTTP</option>
+
+        </select>
+
+        <input
+            id="packet_count"
+            type="number"
+            placeholder="Packet Count"
+            value="50"
+        >
+
+        <input
+            id="packet_size"
+            type="number"
+            placeholder="Packet Size"
+            value="500"
+        >
+
+        <input
+            id="connection_rate"
+            type="number"
+            placeholder="Connection Rate"
+            value="10"
+        >
+
+        <button type="submit">
+            Detect Attack
+        </button>
+
+    </form>
+
+    <div id="detectionResult"></div>
+
+</section>
+
+</main>
+
+
+<script src="/static/js/monitoring.js"></script>
+
+</body>
+
+</html>

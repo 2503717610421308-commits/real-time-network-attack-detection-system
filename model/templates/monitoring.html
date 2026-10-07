@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring | Network Attack Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <nav class="topbar">
+        <div class="brand">SecureNet</div>
+        <div class="nav-links">
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a class="active" href="{{ url_for('monitoring') }}">Monitoring</a>
+            <a href="{{ url_for('logs_page') }}">Logs</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Live Traffic Monitoring</h2>
+            </div>
+            <div id="monitoringFeed" class="monitoring-feed"></div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/monitoring.js') }}"></script>
+</body>
+</html>

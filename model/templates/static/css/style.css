@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: #e8eefc;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(12, 22, 35, 0.9);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem 2rem;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    color: #dfe8ff;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    opacity: 1;
+    color: #7dd3fc;
+}
+
+.page {
+    padding: 2rem;
+}
+
+.panel {
+    background: rgba(15, 27, 42, 0.9);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 1.2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.8rem 0.7rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.93rem;
+}
+
+th {
+    color: #7dd3fc;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.76rem;
+}
+
+.status-pill.detected {
+    background: rgba(239, 68, 68, 0.18);
+    color: #fca5a5;
+}
+
+.status-pill.safe {
+    background: rgba(34, 197, 94, 0.18);
+    color: #86efac;
+}
+
+.risk-pill {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.risk-pill.high {
+    background: rgba(239, 68, 68, 0.18);
+    color: #fca5a5;
+}
+
+.risk-pill.low {
+    background: rgba(52, 211, 153, 0.18);
+    color: #86efac;
+}

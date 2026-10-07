@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Network Attack Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <nav class="topbar">
+        <div class="brand">SecureNet</div>
+        <div class="nav-links">
+            <a class="active" href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('monitoring') }}">Monitoring</a>
+            <a href="{{ url_for('logs_page') }}">Logs</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="stats-grid">
+            <div class="stat-card info">
+                <span class="label">Total Events</span>
+                <strong id="totalLogs">0</strong>
+            </div>
+            <div class="stat-card danger">
+                <span class="label">Detected Attacks</span>
+                <strong id="attackCount">0</strong>
+            </div>
+            <div class="stat-card success">
+                <span class="label">Safe Traffic</span>
+                <strong id="safeCount">0</strong>
+            </div>
+            <div class="stat-card neutral">
+                <span class="label">System Status</span>
+                <strong id="systemStatus">ONLINE</strong>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Recent Network Events</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Source IP</th>
+                        <th>Destination</th>
+                        <th>Protocol</th>
+                        <th>Attack Type</th>
+                        <th>Risk</th>
+                        <th>Status</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody id="recentLogs"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

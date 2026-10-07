@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Attack Detection | Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="login-shell">
+        <div class="login-card">
+            <div class="brand-bar">
+                <span class="brand-dot"></span>
+                <span>SecureNet Monitor</span>
+            </div>
+            <h1>Network Security Login</h1>
+            {% if error %}
+                <div class="error-box">{{ error }}</div>
+            {% endif %}
+            <form method="post" action="{{ url_for('authenticate') }}">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="admin" required>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="admin123" required>
+
+                <button type="submit">Sign In</button>
+            </form>
+            <p class="demo-note">Demo account: admin / admin123</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

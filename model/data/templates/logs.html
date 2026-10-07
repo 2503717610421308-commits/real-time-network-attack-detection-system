@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Attack Detection Logs</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>
+        Attack Detection Logs
+    </h1>
+
+    <a href="/logout">
+        Logout
+    </a>
+
+</header>
+
+
+<nav>
+
+    <a href="/dashboard">
+        Dashboard
+    </a>
+
+    <a href="/monitoring">
+        Monitoring
+    </a>
+
+    <a href="/logs">
+        Logs
+    </a>
+
+</nav>
+
+
+<main>
+
+<section class="panel">
+
+    <h2>
+        Network Activity
+    </h2>
+
+    <button onclick="loadLogs()">
+        Refresh Logs
+    </button>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Time</th>
+                    <th>Source IP</th>
+                    <th>Destination IP</th>
+                    <th>Protocol</th>
+                    <th>Packets</th>
+                    <th>Attack</th>
+                    <th>Risk</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="logsTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<script src="/static/js/logs.js"></script>
+
+</body>
+
+</html>

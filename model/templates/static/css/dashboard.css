@@ -1,0 +1,50 @@
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: rgba(18, 31, 47, 0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 1rem;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat-card .label {
+    color: #a5b4cf;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.stat-card strong {
+    font-size: 2rem;
+}
+
+.stat-card.info { border-top: 3px solid #60a5fa; }
+.stat-card.danger { border-top: 3px solid #f87171; }
+.stat-card.success { border-top: 3px solid #34d399; }
+.stat-card.neutral { border-top: 3px solid #c4b5fd; }
+
+.monitoring-feed {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.feed-item {
+    background: rgba(15, 38, 54, 0.8);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.feed-item strong {
+    display: block;
+    margin-bottom: 0.4rem;
+}
